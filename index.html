@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swappa Fee Calculator</title>
+    <link rel="icon" href="favicon.png"/>
+    <link rel="shortcut icon" href="favicon.png" title="Favicon"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="dist/bundle.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <h1>Fee Calculator for Swappa</h1>
+    <div class="input-section">
+        <label>
+            <input type="checkbox" id="togglePriceMode"> Use Listing Price
+        </label>
+        <label for="priceInput" id="priceLabel">Ask Price</label>
+        <input type="number" id="priceInput" placeholder="Price">
+        <label for="shippingCost">Shipping Cost</label><input type="number" id="shippingCost"
+                                                              placeholder="Shipping Cost">
+        <label for="salesTax">Sales Tax (%)</label><input type="number" id="salesTax" placeholder="Sales Tax (%)">
+        <label>
+            <input type="checkbox" id="featured"> Featured Listing
+        </label>
+    </div>
+    <div class="output-section" id="output">
+        <div class="output-line">
+            <label>Buyer pays:</label>
+            <span id="buyerPaid"></span>
+            <span id="buyerPaidDummy"></span>
+        </div>
+        <div class="output-line">
+            <label>Listing price:</label>
+            <span id="listingPrice"></span>
+            <span id="listingPriceDiff"></span>
+        </div>
+        <div class="output-line">
+            <label>Ask price:</label>
+            <span id="askPriceOutput"></span>
+            <span id="askPriceDiff"></span>
+        </div>
+        <div class="output-line">
+            <label>Swappa payout:</label>
+            <span id="swappaPayout"></span>
+            <span id="swappaPayoutDiff"></span>
+        </div>
+        <div class="output-line">
+            <label>After PayPal:</label>
+            <span id="afterPaypal"></span>
+            <span id="afterPaypalDiff"></span>
+        </div>
+        <div class="output-line">
+            <label>After shipping:</label>
+            <span id="afterShipping"></span>
+            <span id="afterShippingDiff"></span>
+        </div>
+        <div class="output-line">
+            <label>Final revenue:</label>
+            <span id="finalRevenue"></span>
+            <span id="finalRevenueDiff"></span>
+        </div>
+        <div class="output-line output-summary">
+            <label>Total fees:</label>
+            <span id="totalFees"></span>
+            <span id="totalFeesDiff"></span>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p class="disclaimer">
+        This webpage is not endorsed by or affiliated with Swappa.
+    </p>
+    <p>
+        Brought to you by <a href="https://www.deltik.net/" target="_blank">Deltik</a>
+    </p>
+    <p>
+        <a href="https://github.com/Deltik/swappa-fee-calculator" target="_blank">Source Code</a>
+        |
+        <a href="https://raw.githubusercontent.com/Deltik/swappa-fee-calculator/main/swappa-fee-calculator.py" target="_blank">CLI Edition for Nerds</a>
+    </p>
+</div>
+</body>
+
+</html>
