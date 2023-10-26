@@ -23,6 +23,10 @@ jobs:
           npm ci
           npm run build
 
+      - name: Search engine integration
+        run: |
+          echo 'google-site-verification: googlef67a7a699919fab7.html' > ./googlef67a7a699919fab7.html
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
